@@ -1,0 +1,138 @@
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --transition: all 0.3s linear;
+    --max-width: 1120px;
+    /* light shade */
+    --primary-4:#a3e635;
+    --primary-3:#bef264;
+    --primary-2:#d9f99d;
+    /* main color */
+    --primary-5:#84cc16;
+    /* dark shades */
+    --primary-6:#65a30d;
+    --primary-7:#4d7c0f;
+    --primary-8:#3f6212;
+    --dark:#222;
+    --white:#fff;
+    --lingth-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    --dark-shadow: 0 6px 15px rgba(0,0,0, 0.2);
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+nav{
+    line-height: 1;
+    background-color: var(--white);
+    box-shadow: var(--dark-shadow);
+    
+}
+.nav-center{
+    
+}
+.nav-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+    padding: 0.5rem 1rem;
+    /* border: 1px solid red; */
+    padding:1rem ;
+    
+}
+.logo{
+   text-transform: capitalize;
+   letter-spacing: 0.2rem;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+}
+.logo span{
+    color: var(--primary-5);
+    margin-left: 0.5rem;
+    text-transform: capitalize;
+}
+.nav-toggle{
+    font-size: 2rem;
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--primary-5);
+    cursor: pointer;
+    transition: var(--transition);
+    margin-right: 3.5rem;
+}
+.nav-toggle:hover{
+    transform: rotate(90deg);
+}
+
+.social-icons{
+    display: none;
+}
+
+.nav-links{
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+    }
+    .show-links{
+        height:  11rem; 
+    }
+.nav-links a{
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--primary-8);
+    transition: var(--transition);
+
+}
+.nav-links a:hover{
+    background-color: var(--primary-5);
+    padding-left: 1.5rem;
+}
+@media screen and (min-width: 800px) {
+    .nav-toggle{
+        display: none;
+    }
+    .nav-center{
+        width: 90vw;
+        max-width: var(--max-width);
+        margin: 0 auto;
+        /* border: 2px solid red; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-links{
+        display: flex;
+        height: auto;
+    }
+    .nav-links a{
+        padding: 0;
+        margin: 0 0.5rem;
+    }
+    .nav-links a:hover{
+        padding: 0;
+        background-color: transparent;
+        color: var(--primary-4);
+    }
+    .social-icons{
+        display: flex;
+        
+    }
+    .social-icons a{
+        color: var(--primary-6);
+        margin: 0 0.5rem;
+    }
+    .social-icons a:hover{
+        color: var(--primary-4);
+    }
+}
